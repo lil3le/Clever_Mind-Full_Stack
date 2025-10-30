@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exam3 - Enhanced Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="El-Hob-Elly-Kan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">Clever Mind</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="loginBtn">Sign-up/Login</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">&#9776;</div>
+    </nav>
+
+    <!-- New Animated Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="container" id="authContainer">
+            <div class="forms-container">
+                <div class="signin-signup">
+                    <form action="#" class="sign-in-form">
+                        <h2 class="title">Sign in</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" value="Login" class="btn solid" />
+                        <p class="social-text">Or Sign in with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                    <form action="#" class="sign-up-form">
+                        <h2 class="title">Sign up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" />
+                        </div>
+                        <input type="submit" class="btn" value="Sign up" />
+                        <p class="social-text">Or Sign up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New here ?</h3>
+                        <p>
+                            Join our amazing community and discover incredible features waiting for you!
+                        </p>
+                        <button class="btn transparent" id="sign-up-btn">
+                            Sign up
+                        </button>
+                    </div>
+                    <img src="https://via.placeholder.com/300x200/4481eb/white?text=Welcome" class="image"
+                        alt="Welcome" />
+                </div>
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>One of us ?</h3>
+                        <p>
+                            Welcome back! Sign in to continue your amazing journey with us.
+                        </p>
+                        <button class="btn transparent" id="sign-in-btn">
+                            Sign in
+                        </button>
+                    </div>
+                    <img src="https://via.placeholder.com/300x200/4481eb/white?text=Login" class="image" alt="Login" />
+                </div>
+            </div>
+
+            <span class="close-modal">&times;</span>
+        </div>
+    </div>
+
+    <!-- Search -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-icon">
+                <img src="search.png" alt="Search">
+            </div>
+            <form class="search-box">
+                <input type="text" placeholder="Search for videos...">
+            </form>
+        </div>
+    </section>
+
+    <!-- Audio Player Section -->
+    <section class="audio-section">
+        <h2>Featured Audio</h2>
+        <div class="audio-player">
+            <audio id="audioPlayer">
+                <source src="El-Hob-Elly-Kan.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="audio-controls">
+                <button id="playBtn" class="neon-btn type1">Play</button>
+                <button id="stopBtn" class="neon-btn type2">Stop</button>
+                <button id="bgMusicToggle" class="neon-btn type1">Toggle BG Music</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="video-section">
+        <h2>Featured Video</h2>
+        <video controls width="600">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section class="text-features-section">
+        <div class="text-container">
+            <div class="text-item rectangle-text">
+                <div class="rectangle-shape"></div>
+                <p>Rectangle Design Text</p>
+            </div>
+
+            <div class="text-item circle-text">
+                <div class="circle-shape"></div>
+                <p>Circle Design Text</p>
+            </div>
+
+            <div class="text-item simple-text">
+                <p>Simple Neon Text</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.onclick = () => {
+            navLinks.classList.toggle('active');
+        };
+
+        // Modal Controls
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeBtn = document.querySelector('.close-modal');
+        const authContainer = document.getElementById('authContainer');
+        const signUpBtn = document.querySelector("#sign-up-btn");
+        const signInBtn = document.querySelector("#sign-in-btn");
+
+        // Open modal
+        loginBtn.onclick = () => {
+            loginModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        };
+
+        // Close modal
+        closeBtn.onclick = () => {
+            loginModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        };
+
+        // Close modal when clicking outside
+        loginModal.onclick = (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        // Animated form switching
+        signUpBtn.addEventListener("click", () => {
+            authContainer.classList.add("sign-up-mode");
+        });
+
+        signInBtn.addEventListener("click", () => {
+            authContainer.classList.remove("sign-up-mode");
+        });
+
+        // Audio Controls
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const bgMusicToggle = document.getElementById('bgMusicToggle');
+
+        playBtn.onclick = () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playBtn.textContent = 'Pause';
+            } else {
+                audioPlayer.pause();
+                playBtn.textContent = 'Play';
+            }
+        };
+
+        stopBtn.onclick = () => {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            playBtn.textContent = 'Play';
+        };
+
+        audioPlayer.onplay = () => playBtn.textContent = 'Pause';
+        audioPlayer.onpause = () => playBtn.textContent = 'Play';
+
+        // Background Music Toggle
+        let bgMusicPlaying = false;
+        bgMusicToggle.onclick = () => {
+            if (bgMusicPlaying) {
+                backgroundMusic.pause();
+                bgMusicToggle.textContent = 'Play BG Music';
+                bgMusicPlaying = false;
+            } else {
+                backgroundMusic.play().then(() => {
+                    bgMusicToggle.textContent = 'Stop BG Music';
+                    bgMusicPlaying = true;
+                }).catch(e => {
+                    console.log('Background music play failed:', e);
+                });
+            }
+        };
+    </script>
+</body>
+
+</html>

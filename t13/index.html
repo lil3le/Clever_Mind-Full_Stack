@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" id="logo">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <i class="fas fa-search search-icon" id="searchIcon"></i>
+                <div class="theme-switch">
+                    <input type="checkbox" id="switch" class="checkbox" />
+                    <label for="switch" class="label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-section" id="home">
+            <div class="video-background">
+                <video autoplay muted loop>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-overlay">
+                <div class="hero-content">
+                    <h1>Welcome to Our Website</h1>
+                    <p>Experience the future of web design</p>
+                    <button class="cta-button">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-cards-section" id="about">
+            <h2>Our Services</h2>
+            <div class="cards-grid">
+                <div class="glass-card" data-tilt>
+                    <div class="content">
+                        <div class="card-number">01</div>
+                        <h3>Web Development</h3>
+                        <p>Creating stunning and functional websites with modern technologies and responsive design.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="glass-card" data-tilt>
+                    <div class="content">
+                        <div class="card-number">02</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Crafting beautiful and intuitive user experiences that engage and delight your users.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="glass-card" data-tilt>
+                    <div class="content">
+                        <div class="card-number">03</div>
+                        <h3>Mobile Apps</h3>
+                        <p>Building responsive mobile applications for all platforms with cutting-edge technology.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="audio-section" id="store">
+            <div class="container">
+                <h2>Featured Audio</h2>
+                <div class="audio-player">
+                    <audio id="audioElement" preload="metadata">
+                        <source src="El-Hob-Elly-Kan.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="player-container">
+                        <div class="album-art">
+                            <img src=""
+                                alt="Album Art">
+                        </div>
+                        <div class="player-controls">
+                            <div class="track-info">
+                                <h3>El Hob Elly Kan</h3>
+                                <p>Mayada</p>
+                            </div>
+                            <div class="controls">
+                                <button class="control-btn" id="prevBtn">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                                <button class="control-btn play-pause" id="playBtn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="control-btn" id="nextBtn">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progressBar">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                                <div class="time-display">
+                                    <span class="current-time" id="currentTime">0:00</span>
+                                    <span class="duration" id="duration">0:00</span>
+                                </div>
+                            </div>
+                            <div class="volume-control">
+                                <i class="fas fa-volume-up volume-icon" id="volumeIcon"></i>
+                                <div class="volume-slider-container">
+                                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100"
+                                        value="50">
+                                    <span class="volume-value" id="volumeValue">50%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section" id="locations">
+            <div class="container">
+                <h2>Visit Clever Mind</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.605312381337!2d35.8327542!3d31.971602599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca3f640d0be71%3A0x97e1a09530f58612!2sClever%20Mind%20POB%20ICT!5e0!3m2!1sen!2sjo!4v1760964550151!5m2!1sen!2sjo"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>&copy; 2025 Clever Mind. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        var VanillaTilt = function () { "use strict"; class t { constructor(e, i = {}) { if (!(e instanceof Node)) throw "Can't initialize VanillaTilt because " + e + " is not a Node."; this.width = null, this.height = null, this.clientWidth = null, this.clientHeight = null, this.left = null, this.top = null, this.gammazero = null, this.betazero = null, this.lastgammazero = null, this.lastbetazero = null, this.transitionTimeout = null, this.updateCall = null, this.event = null, this.updateBind = this.update.bind(this), this.resetBind = this.reset.bind(this), this.element = e, this.settings = this.extendSettings(i), this.reverse = this.settings.reverse ? -1 : 1, this.glare = t.isSettingTrue(this.settings.glare), this.glarePrerender = t.isSettingTrue(this.settings["glare-prerender"]), this.fullPageListening = t.isSettingTrue(this.settings["full-page-listening"]), this.gyroscope = t.isSettingTrue(this.settings.gyroscope), this.gyroscopeSamples = this.settings.gyroscopeSamples, this.elementListener = this.getElementListener(), this.glare && this.prepareGlare(), this.fullPageListening && this.updateClientSize(), this.addEventListeners(), this.updateInitialPosition() } static isSettingTrue(t) { return "" === t || !0 === t || 1 === t } getElementListener() { if (this.fullPageListening) return window.document; if ("string" == typeof this.settings["mouse-event-element"]) { const t = document.querySelector(this.settings["mouse-event-element"]); if (t) return t } return this.settings["mouse-event-element"] instanceof Node ? this.settings["mouse-event-element"] : this.element } addEventListeners() { this.onMouseEnterBind = this.onMouseEnter.bind(this), this.onMouseMoveBind = this.onMouseMove.bind(this), this.onMouseLeaveBind = this.onMouseLeave.bind(this), this.onWindowResizeBind = this.onWindowResize.bind(this), this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this), this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind), this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind), this.elementListener.addEventListener("mousemove", this.onMouseMoveBind), (this.glare || this.fullPageListening) && window.addEventListener("resize", this.onWindowResizeBind), this.gyroscope && window.addEventListener("deviceorientation", this.onDeviceOrientationBind) } removeEventListeners() { this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind), this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind), this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind), this.gyroscope && window.removeEventListener("deviceorientation", this.onDeviceOrientationBind), (this.glare || this.fullPageListening) && window.removeEventListener("resize", this.onWindowResizeBind) } destroy() { clearTimeout(this.transitionTimeout), null !== this.updateCall && cancelAnimationFrame(this.updateCall), this.reset(), this.removeEventListeners(), this.element.vanillaTilt = null, delete this.element.vanillaTilt, this.element = null } onDeviceOrientation(t) { if (null === t.gamma || null === t.beta) return; this.updateElementPosition(), this.gyroscopeSamples > 0 && (this.lastgammazero = this.gammazero, this.lastbetazero = this.betazero, null === this.gammazero ? (this.gammazero = t.gamma, this.betazero = t.beta) : (this.gammazero = (t.gamma + this.lastgammazero) / 2, this.betazero = (t.beta + this.lastbetazero) / 2), this.gyroscopeSamples -= 1); const e = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX, i = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY, s = e / this.width, n = i / this.height, l = (t.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero)) / s, a = (t.beta - (this.settings.gyroscopeMinAngleY + this.betazero)) / n; null !== this.updateCall && cancelAnimationFrame(this.updateCall), this.event = { clientX: l + this.left, clientY: a + this.top }, this.updateCall = requestAnimationFrame(this.updateBind) } onMouseEnter() { this.updateElementPosition(), this.element.style.willChange = "transform", this.setTransition() } onMouseMove(t) { null !== this.updateCall && cancelAnimationFrame(this.updateCall), this.event = t, this.updateCall = requestAnimationFrame(this.updateBind) } onMouseLeave() { this.setTransition(), this.settings.reset && requestAnimationFrame(this.resetBind) } reset() { this.event = { clientX: this.left + this.width / 2, clientY: this.top + this.height / 2 }, this.element && this.element.style && (this.element.style.transform = `perspective(${this.settings.perspective}px) ` + "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"), this.resetGlare() } resetGlare() { this.glare && (this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)", this.glareElement.style.opacity = "0") } updateInitialPosition() { if (0 === this.settings.startX && 0 === this.settings.startY) return; this.onMouseEnter(), this.fullPageListening ? this.event = { clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth, clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight } : this.event = { clientX: this.left + (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width, clientY: this.top + (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height }; let t = this.settings.scale; this.settings.scale = 1, this.update(), this.settings.scale = t, this.resetGlare() } getValues() { let t, e; return this.fullPageListening ? (t = this.event.clientX / this.clientWidth, e = this.event.clientY / this.clientHeight) : (t = (this.event.clientX - this.left) / this.width, e = (this.event.clientY - this.top) / this.height), t = Math.min(Math.max(t, 0), 1), e = Math.min(Math.max(e, 0), 1), { tiltX: (this.reverse * (this.settings.max - t * this.settings.max * 2)).toFixed(2), tiltY: (this.reverse * (e * this.settings.max * 2 - this.settings.max)).toFixed(2), percentageX: 100 * t, percentageY: 100 * e, angle: Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI) } } updateElementPosition() { let t = this.element.getBoundingClientRect(); this.width = this.element.offsetWidth, this.height = this.element.offsetHeight, this.left = t.left, this.top = t.top } update() { let t = this.getValues(); this.element.style.transform = "perspective(" + this.settings.perspective + "px) rotateX(" + ("x" === this.settings.axis ? 0 : t.tiltY) + "deg) rotateY(" + ("y" === this.settings.axis ? 0 : t.tiltX) + "deg) scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")", this.glare && (this.glareElement.style.transform = `rotate(${t.angle}deg) translate(-50%, -50%)`, this.glareElement.style.opacity = `${t.percentageY * this.settings["max-glare"] / 100}`), this.element.dispatchEvent(new CustomEvent("tiltChange", { detail: t })), this.updateCall = null } prepareGlare() { if (!this.glarePrerender) { const t = document.createElement("div"); t.classList.add("js-tilt-glare"); const e = document.createElement("div"); e.classList.add("js-tilt-glare-inner"), t.appendChild(e), this.element.appendChild(t) } this.glareElementWrapper = this.element.querySelector(".js-tilt-glare"), this.glareElement = this.element.querySelector(".js-tilt-glare-inner"), this.glarePrerender || (Object.assign(this.glareElementWrapper.style, { position: "absolute", top: "0", left: "0", width: "100%", height: "100%", overflow: "hidden", "pointer-events": "none" }), Object.assign(this.glareElement.style, { position: "absolute", top: "50%", left: "50%", "pointer-events": "none", "background-image": "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)", width: `${2 * this.element.offsetWidth}px`, height: `${2 * this.element.offsetWidth}px`, transform: "rotate(180deg) translate(-50%, -50%)", "transform-origin": "0% 0%", opacity: "0" })) } updateGlareSize() { this.glare && Object.assign(this.glareElement.style, { width: `${2 * this.element.offsetWidth}`, height: `${2 * this.element.offsetWidth}` }) } updateClientSize() { this.clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, this.clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } onWindowResize() { this.updateGlareSize(), this.updateClientSize() } setTransition() { clearTimeout(this.transitionTimeout), this.element.style.transition = this.settings.speed + "ms " + this.settings.easing, this.glare && (this.glareElement.style.transition = `opacity ${this.settings.speed}ms ${this.settings.easing}`), this.transitionTimeout = setTimeout(() => { this.element.style.transition = "", this.glare && (this.glareElement.style.transition = "") }, this.settings.speed) } extendSettings(t) { let e = { reverse: !1, max: 15, startX: 0, startY: 0, perspective: 1e3, easing: "cubic-bezier(.03,.98,.52,.99)", scale: 1, speed: 300, transition: !0, axis: null, glare: !1, "max-glare": 1, "glare-prerender": !1, "full-page-listening": !1, "mouse-event-element": null, reset: !0, gyroscope: !0, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45, gyroscopeSamples: 10 }, i = {}; for (var s in e) if (s in t) i[s] = t[s]; else if (this.element.hasAttribute("data-tilt-" + s)) { let t = this.element.getAttribute("data-tilt-" + s); try { i[s] = JSON.parse(t) } catch (e) { i[s] = t } } else i[s] = e[s]; return i } static init(e, i) { e instanceof Node && (e = [e]), e instanceof NodeList && (e = [].slice.call(e)), e instanceof Array && e.forEach(e => { "vanillaTilt" in e || (e.vanillaTilt = new t(e, i)) }) } } return "undefined" != typeof document && (window.VanillaTilt = t, t.init(document.querySelectorAll("[data-tilt]"))), t }();
+        VanillaTilt.init(document.querySelectorAll(".glass-card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>

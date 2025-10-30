@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* BG */
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f7d794, #ff6b6b);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NAV */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.section {
+    min-height: 100vh;
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-section {
+    text-align: center;
+}
+
+/* Slider */
+.slider-wrapper {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    gap: 20px;
+}
+
+.slider {
+    height: 80px;
+    padding-left: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider div {
+    color: #fff;
+    height: 80px;
+    margin-bottom: 80px;
+    padding: 10px 30px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slider-text1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    animation: slide 9s linear infinite;
+}
+
+.slider-text2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.slider-text3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+@keyframes slide {
+
+    0%,
+    30% {
+        margin-top: 0px;
+    }
+
+    33%,
+    63% {
+        margin-top: -160px;
+    }
+
+    66%,
+    96% {
+        margin-top: -320px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+/* Tic Tac Toe */
+.game-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cell {
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    position: absolute;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+}
+
+.cell.x::before {
+    width: 15px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    width: 15px;
+    height: 100px;
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 15px solid #4ecdc4;
+    border-radius: 50%;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 107, 107, 0.3);
+    border-radius: 5px;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before {
+    width: 15px;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+.board.x .cell:not(.x):not(.circle):hover::after {
+    width: 15px;
+    height: 100px;
+    transform: rotate(-45deg);
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 15px solid rgba(78, 205, 196, 0.3);
+    border-radius: 50%;
+}
+
+.winning-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.winning-message [data-winning-message-text] {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.winning-message button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.winning-message button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Clock */
+.clock {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.center-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hour-hand {
+    width: 8px;
+    height: 25%;
+    margin-left: -4px;
+    background: white;
+}
+
+.minute-hand {
+    width: 6px;
+    height: 35%;
+    margin-left: -3px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.second-hand {
+    width: 3px;
+    height: 40%;
+    margin-left: -1.5px;
+    background: #ff6b6b;
+}
+
+.number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(calc(var(--i) * 30deg));
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.number span {
+    display: inline-block;
+    transform: rotate(calc(var(--i) * -30deg));
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.digital-clock {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.footer-content p {
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}

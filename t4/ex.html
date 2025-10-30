@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List and Gird view using Javascript</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="links">
+            <ul>
+                <li data-view="list-view" class="li-list active">
+                    <i class="fas fa-th-list"></i>
+                    List View
+                </li>
+                <li data-view="grid-view" class="li-grid">
+                    <i class="fas fa-th-large"></i>
+                    Grid View
+                </li>
+            </ul>
+        </div>
+        <div class="view_main">
+            <div class="view_wrap list-view" style="display: block;">
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="tomato.png" alt="tomato">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Tomato</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="chilli.png" alt="chilli">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Chilli</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="carrot.png" alt="carrot">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Carrot</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="onion.png" alt="onion">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Onion</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="potato.png" alt="potato">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Potato</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+            </div>
+            <div class="view_wrap grid-view" style="display: none;">
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="apple.png" alt="apple">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Apple</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="banana.png" alt="banana">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Banana</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="grapes.png" alt="grapes">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Grapes</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="pineapple.png" alt="pineapple">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Pineapple</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+                <div class="view_item">
+                    <div class="vi_left">
+                        <img src="strawberry.png" alt="strawberry">
+                    </div>
+                    <div class="vi_right">
+                        <p class="title">Strawberry</p>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit,
+                            veniam! Voluptate a impedit animi!</p>
+                        <div class="btn">View More</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2>Meet The Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+                        alt="John">
+                    <h3>John</h3>
+                    <p class="title">Web Developer</p>
+                    <p>Expert in HTML, CSS, and JavaScript with 5 years of experience.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
+                        alt="Jane">
+                    <h3>Jane</h3>
+                    <p class="title">UI/UX Designer</p>
+                    <p>Creative designer focused on user experience and modern interfaces.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+                        alt="Mike">
+                    <h3>Mike</h3>
+                    <p class="title">Project Manager</p>
+                    <p>Experienced project manager ensuring smooth development processes.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper-share">
+        <div class="toggle_button">
+            <ul>
+                <li>
+                    <a class="share_btn">
+                        <span class="text">SHARE</span>
+                        <span class="icon"><i class="fas fa-plus"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sm facebook">
+                        <span class="icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                        <span class="text">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sm twitter">
+                        <span class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span class="text">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sm instagram">
+                        <span class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <span class="text">Intagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sm reddit">
+                        <span class="icon">
+                            <i class="fab fa-reddit-alien"></i>
+                        </span>
+                        <span class="text">Reddit</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="neo-cards">
+        <div class="neo-card">
+            <h3>Card One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit
+                animi!</p>
+            <a href="#" class="neo-btn">Read More</a>
+        </div>
+        <div class="neo-card">
+            <h3>Card Two</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit
+                animi!</p>
+            <a href="#" class="neo-btn">Read More</a>
+        </div>
+        <div class="neo-card">
+            <h3>Card Three</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit
+                animi!.</p>
+            <a href="#" class="neo-btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="product-section">
+        <h2>Featured Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-banner">
+                    <span class="product-badge">Fresh</span>
+                </div>
+                <div class="product-image">
+                    <img src="apple.png" alt="Apple">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Fresh Apple</h3>
+                    <div class="product-price">
+                        <span class="price-now">$3.99</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="product-description">Sweet and juicy apples freshly harvested from organic orchards.</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-banner">
+                    <span class="product-badge">Fresh</span>
+                </div>
+                <div class="product-image">
+                    <img src="tomato.png" alt="Tomato">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Ripe Tomato</h3>
+                    <div class="product-price">
+                        <span class="price-now">$2.49</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <p class="product-description">Farm-fresh tomatoes packed with flavor and essential nutrients.</p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-banner">
+                    <span class="product-badge bestseller">Bestseller</span>
+                </div>
+                <div class="product-image">
+                    <img src="banana.png" alt="Banana">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title">Organic Banana</h3>
+                    <div class="product-price">
+                        <span class="price-now">$1.99</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <p class="product-description">Naturally sweet and potassium-rich bananas from sustainable farms.
+                    </p>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="todo-wrapper">
+        <h2>Simple To-Do List</h2>
+        <div class="todo-container">
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Buy groceries</label>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Complete assignment</label>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" id="task3" checked>
+                    <label for="task3">Pay bills</label>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" id="task4">
+                    <label for="task4">Call doctor for appointment</label>
+                </li>
+                <li class="todo-item">
+                    <input type="checkbox" id="task5">
+                    <label for="task5">Clean the house</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        var li_links = document.querySelectorAll(".links ul li");
+        var view_wraps = document.querySelectorAll(".view_wrap");
+        var list_view = document.querySelector(".list-view");
+        var grid_view = document.querySelector(".grid-view");
+
+        li_links.forEach(function (link) {
+            link.addEventListener("click", function () {
+                li_links.forEach(function (link) {
+                    link.classList.remove("active");
+                })
+
+                link.classList.add("active");
+
+                var li_view = link.getAttribute("data-view");
+
+                view_wraps.forEach(function (view) {
+                    view.style.display = "none";
+                })
+
+                if (li_view == "list-view") {
+                    list_view.style.display = "block";
+                }
+                else {
+                    grid_view.style.display = "block";
+                }
+            })
+        })
+
+        var share_btn = document.querySelector(".share_btn");
+        var toggle_button = document.querySelector(".toggle_button");
+
+        share_btn.addEventListener("click", function () {
+            toggle_button.classList.toggle("active");
+        })
+        VanillaTilt.init(document.querySelectorAll(".product-card"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+
+</body>
+
+</html>

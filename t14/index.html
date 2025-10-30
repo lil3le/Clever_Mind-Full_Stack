@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Mind</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- BG -->
+    <div class="gradient-bg"></div>
+
+    <!-- NAV -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Clever Mind Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#slider" class="nav-link">Slider</a></li>
+                <li><a href="#game" class="nav-link">Game</a></li>
+                <li><a href="#clock" class="nav-link">Clock</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section home-section">
+            <div class="container">
+                <h2 class="section-title">14th Task</h2>
+            </div>
+        </section>
+
+        <!-- Slider -->
+        <section id="slider" class="section slider-section">
+            <div class="container">
+                <h2 class="section-title">Text Slider</h2>
+                <div class="slider-wrapper">
+                    I can write
+                    <div class="slider">
+                        <div class="slider-text1">HTML</div>
+                        <div class="slider-text2">JavaScript</div>
+                        <div class="slider-text3">CSS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game -->
+        <section id="game" class="section game-section">
+            <div class="container">
+                <h2 class="section-title">Tic Tac Toe Game</h2>
+                <div class="game-container">
+                    <div id="board" class="game-board">
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                        <div class="cell" data-cell></div>
+                    </div>
+                    <div id="winningMessage" class="winning-message">
+                        <div data-winning-message-text></div>
+                        <button id="restartButton">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clock -->
+        <section id="clock" class="section clock-section">
+            <div class="container">
+                <h2 class="section-title">Analog Clock</h2>
+                <div class="clock">
+                    <div class="clock-face">
+                        <div class="hand hour-hand"></div>
+                        <div class="hand minute-hand"></div>
+                        <div class="hand second-hand"></div>
+                        <div class="center-dot"></div>
+                        <div class="number" style="--i:1"><span>1</span></div>
+                        <div class="number" style="--i:2"><span>2</span></div>
+                        <div class="number" style="--i:3"><span>3</span></div>
+                        <div class="number" style="--i:4"><span>4</span></div>
+                        <div class="number" style="--i:5"><span>5</span></div>
+                        <div class="number" style="--i:6"><span>6</span></div>
+                        <div class="number" style="--i:7"><span>7</span></div>
+                        <div class="number" style="--i:8"><span>8</span></div>
+                        <div class="number" style="--i:9"><span>9</span></div>
+                        <div class="number" style="--i:10"><span>10</span></div>
+                        <div class="number" style="--i:11"><span>11</span></div>
+                        <div class="number" style="--i:12"><span>12</span></div>
+                    </div>
+                </div>
+                <div class="digital-clock">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Clever Mind. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

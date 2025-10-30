@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam2 - Video & Modern Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">Clever Mind</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">&#9776;</div>
+    </nav>
+
+    <!-- Search -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-icon">
+                <img src="search.png" alt="Search">
+            </div>
+            <form class="search-box">
+                <input type="text" placeholder="Search for videos...">
+            </form>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="video-section">
+        <h2>Featured Video</h2>
+        <video controls width="600">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.onclick = () => {
+            navLinks.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

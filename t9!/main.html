@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Tide</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="" class="brand-link">
+        <img src="assets/logo.png" alt="Travel Tide Logo" class="navbar-logo" />
+        <span>Travel Tide</span>
+      </a>
+    </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="#popular">Packages</a></li>
+        <li><a href="#booking" class="flight-tab">Flights</a></li>
+        <li><a href="#booking" class="hotel-tab">Hotels</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+    </nav>
+    <div class="signin">
+      <button class="sign-btn"><a href="#">Sign in</a></button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="homepage-container">
+    <!-- Hero + Carousel -->
+    <section class="hero-wrapper">
+      <div class="HomePage-hero-section">
+        <div class="carousel-container">
+          <!-- Dynamic background slides -->
+          <div class="location-info">
+            <h2></h2>
+            <p></p>
+          </div>
+
+          <!-- Thumbnail carousel -->
+          <div class="stacked-carousel horizontal">
+            <div class="carousel-controls">
+              <button class="carousel-arrow prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carousel-arrow next" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="HomePage-nav-tabs nav justify-content-center">
+          <li class="nav-item">
+            <button class="HomePage-nav-link nav-link HomePage-active" data-tab="flights">Flights</button>
+          </li>
+          <li class="nav-item">
+            <button class="HomePage-nav-link nav-link" data-tab="hotels">Hotels</button>
+          </li>
+          <li class="nav-item">
+            <button class="HomePage-nav-link nav-link" data-tab="guide">Guide</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Booking card -->
+      <div id="booking" class="HomePage-booking-options glass-card">
+        <div class="tab-content">
+          <!-- Hotels -->
+          <form id="hotels-form" class="HomePage-form-inline" style="display:none;">
+            <input type="text" class="HomePage-form-control" placeholder="Destination" id="hotelDestination" />
+            <input type="date" class="HomePage-form-control" id="checkIn" />
+            <input type="date" class="HomePage-form-control" id="checkOut" readonly />
+            <input type="number" class="HomePage-form-control" placeholder="Nights" id="nights" value="1" min="1" />
+            <input type="number" class="HomePage-form-control" placeholder="Travellers" id="hotelTravellers" min="1"
+              value="1" />
+            <button type="submit" class="HomePage-btn HomePage-btn-custom">Search</button>
+          </form>
+
+          <!-- Flights -->
+          <form id="flights-form" class="HomePage-form-inline">
+            <input type="text" class="HomePage-form-control" placeholder="From (City)" id="departureCity" />
+            <input type="text" class="HomePage-form-control" placeholder="To (City)" id="arrivalCity" />
+            <input type="date" class="HomePage-form-control" id="departureDate" />
+            <input type="date" class="HomePage-form-control" id="returnDate" />
+            <input type="number" class="HomePage-form-control" placeholder="Travellers" id="flightTravellers" min="1"
+              value="1" />
+            <button type="submit" class="HomePage-btn HomePage-btn-custom">Search</button>
+          </form>
+
+          <!-- Guide -->
+          <form id="guide-form" class="HomePage-form-inline" style="display:none;">
+            <input type="text" class="HomePage-form-control" placeholder="City" id="guideCity" />
+            <input type="date" class="HomePage-form-control" id="guideDate" />
+            <input type="number" class="HomePage-form-control" placeholder="Travellers" id="guideTravellers" min="1"
+              value="1" />
+            <button type="submit" class="HomePage-btn HomePage-btn-custom">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Places collage -->
+    <section class="HomePage-places-section py-5">
+      <div class="container-fluid px-md-5">
+        <div class="row align-items-center position-relative mb-5">
+          <div class="col-md-3 offset-md-1">
+            <h2 class="mb-4">Most Beautiful Places in the World</h2>
+            <p>
+              There are many gorgeous places to visit and see, and here are
+              some photos of them.
+            </p>
+          </div>
+          <div class="col-md-7 position-relative" style="height: 850px">
+            <div class="first-img">
+              <img src="assets/cyprus.jpg" class="HomePage-img img-fluid rounded shadow-sm" alt="Cyprus"
+                style="width: 380px; height: 278px" />
+            </div>
+            <div class="second-img">
+              <img src="assets/petra.jpg" class="HomePage-img img-fluid rounded shadow-sm" alt="Petra"
+                style="width: 354px; height: 457px" />
+            </div>
+            <div class="third-img">
+              <img src="assets/bulgaria.jpg" class="HomePage-img img-fluid rounded shadow-sm" alt="Bulgaria"
+                style="width: 424px; height: 261px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature rectangles -->
+      <div class="container-fluid px-md-5 mt-5 pt-5">
+        <div class="rectangle-container">
+          <div class="rectangle1">
+            <div class="icon"><i class="fas fa-globe"></i></div>
+            <div class="text">
+              <h3>Worldwide Tours</h3>
+              <p>There is a variety of packages and plans, choose the that
+                suits you the best.</p>
+            </div>
+          </div>
+          <div class="rectangle2">
+            <div class="icon"><i class="fas fa-plane"></i></div>
+            <div class="text">
+              <h3>Best Flights</h3>
+              <p>Find the best deals on flights to any destination worldwide.</p>
+            </div>
+          </div>
+          <div class="rectangle3">
+            <div class="icon"><i class="fas fa-hotel"></i></div>
+            <div class="text">
+              <h3>Great Hotels</h3>
+              <p>There are various hotels that you can choose from the
+                country that you want to visit.</p>
+            </div>
+          </div>
+          <div class="rectangle4">
+            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="text">
+              <h3>Local Guides</h3>
+              <p>Connect with experienced local guides for an authentic
+                experience</p>
+            </div>
+          </div>
+          <div class="why-us">
+            <h2 class="mb-4">Why with us?</h2>
+            <p>
+              Because we have a variety of packages and we got a tour guide
+              that can help you in your trip
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular tours -->
+    <section id="popular" class="HomePage-popular-tours py-5">
+      <div class="container-fluid px-md-5">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-heading">Most Popular Tours</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6 mb-4">
+            <div class="tour-card">
+              <div class="tour-image">
+                <img src="assets/alexandria.jpg" alt="Alexandria" />
+              </div>
+              <div class="tour-details">
+                <h3>Alexandria, Egypt</h3>
+                <div class="tour-meta">
+                  <div class="meta-item"><i class="fa fa-clock"></i><span>5 days</span></div>
+                  <div class="meta-item"><i class="fa fa-user"></i><span>10 people</span></div>
+                </div>
+                <div class="tour-rating"><span class="stars">★★★★★</span><span class="rating">5</span></div>
+                <div class="tour-price">
+                  <p>Starts from</p>
+                  <h4>$499</h4>
+                </div>
+                <button class="tour-book-btn" data-city="Alexandria">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="tour-card">
+              <div class="tour-image">
+                <img src="assets/antalya.jpg" alt="Antalya" />
+              </div>
+              <div class="tour-details">
+                <h3>Antalya, Turkey</h3>
+                <div class="tour-meta">
+                  <div class="meta-item"><i class="fa fa-clock"></i><span>7 days</span></div>
+                  <div class="meta-item"><i class="fa fa-user"></i><span>12 people</span></div>
+                </div>
+                <div class="tour-rating"><span class="stars">★★★★☆</span><span class="rating">4</span></div>
+                <div class="tour-price">
+                  <p>Starts from</p>
+                  <h4>$510</h4>
+                </div>
+                <button class="tour-book-btn" data-city="Antalya">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-4">
+            <div class="tour-card">
+              <div class="tour-image">
+                <img src="assets/varna.jpg" alt="Varna" />
+              </div>
+              <div class="tour-details">
+                <h3>Varna, Bulgaria</h3>
+                <div class="tour-meta">
+                  <div class="meta-item"><i class="fa fa-clock"></i><span>4 days</span></div>
+                  <div class="meta-item"><i class="fa fa-user"></i><span>8 people</span></div>
+                </div>
+                <div class="tour-rating"><span class="stars">★★★★☆</span><span class="rating">4</span></div>
+                <div class="tour-price">
+                  <p>Starts from</p>
+                  <h4>$359</h4>
+                </div>
+                <button class="tour-book-btn" data-city="Varna">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="tour-card">
+              <div class="tour-image">
+                <img src="assets/aqaba.jpg" alt="Aqaba" />
+              </div>
+              <div class="tour-details">
+                <h3>Aqaba, Jordan</h3>
+                <div class="tour-meta">
+                  <div class="meta-item"><i class="fa fa-clock"></i><span>3 days</span></div>
+                  <div class="meta-item"><i class="fa fa-user"></i><span>6 people</span></div>
+                </div>
+                <div class="tour-rating"><span class="stars">★★★★★</span><span class="rating">5</span></div>
+                <div class="tour-price">
+                  <p>Starts from</p>
+                  <h4>$299</h4>
+                </div>
+                <button class="tour-book-btn" data-city="Aqaba">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="HomePage-testimonials py-5">
+      <div class="container-fluid px-md-5">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-heading">What Our Clients Say</h2>
+          </div>
+        </div>
+
+        <div class="testimonials-slider-container">
+          <div class="testimonials-slider">
+            <div class="testimonials-track" id="testimonials-track"></div>
+          </div>
+
+          <button class="testimonial-nav prev" id="prev-testimonial" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testimonial-nav next" id="next-testimonial" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footerBottom">
+      <h4>
+        <a href="#">About Us</a><br />
+        Contact us at:<br />
+        traveltide@gmail.com
+      </h4>
+    </div>
+    <div class="copyright">
+      © <span id="current-year"></span> TravelTide. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
