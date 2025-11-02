@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contact Us - Vanilla Bootstrap Theme</title>
+    <meta name="description" content="Get in touch with us - Contact page for Vanilla Bootstrap Theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!-- Modern Navigation -->
+    <nav class="modern-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h3>Vanilla</h3>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="index.html#our-story" class="nav-link">Our Story</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Get in touch with us today!</p>
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <h4>Our Location</h4>
+                        <p>123 Business Street<br>
+                            Suite 100<br>
+                            City, State 12345</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p>Main: <a href="tel:+1234567890">(123) 456-7890</a><br>
+                            Support: <a href="tel:+1234567891">(123) 456-7891</a><br>
+                            Toll Free: <a href="tel:+18001234567">(800) 123-4567</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p>General: <a href="mailto:info@vanilla.com">info@vanilla.com</a><br>
+                            Support: <a href="mailto:support@vanilla.com">support@vanilla.com</a><br>
+                            Sales: <a href="mailto:sales@vanilla.com">sales@vanilla.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="main-contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="contact-form-wrapper">
+                        <div class="section-header">
+                            <h2>Send us a Message</h2>
+                            <div class="section-divider"></div>
+                            <p>Have a question or need assistance? Fill out the form below and we'll get back to you as
+                                soon as possible.</p>
+                        </div>
+
+                        <div class="contact-form">
+                            <form id="contactForm" action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Company/Organization</label>
+                                    <input type="text" class="form-control" id="company" name="company">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="">Please select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="sales">Sales Question</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea class="form-control" id="message" name="message" rows="6"
+                                        placeholder="Please describe your inquiry in detail..." required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="newsletter"
+                                            name="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for updates and offers
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="privacy" name="privacy"
+                                            required>
+                                        <label class="form-check-label" for="privacy">
+                                            I agree to the <a href="#" target="_blank">Privacy Policy</a> and <a
+                                                href="#" target="_blank">Terms of Service</a> *
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-primary full-width">
+                                    <i class="fa fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-sidebar">
+                        <div class="contact-card">
+                            <h4>Business Hours</h4>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="day">Monday - Friday</span>
+                                    <span class="time">9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Saturday</span>
+                                    <span class="time">10:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Sunday</span>
+                                    <span class="time">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <h4>Quick Response</h4>
+                            <p>We typically respond to all inquiries within 24 hours during business days. For urgent
+                                matters, please call us directly.</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fa fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fa fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fa fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fa fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Find Us</h2>
+                <p>Visit our office or get directions</p>
+            </div>
+            <div class="map-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907"
+                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="faq-accordion" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h5>How quickly do you respond to inquiries?</h5>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We typically respond to all inquiries within 24 hours during business days. For
+                                    urgent matters, please call us directly at (123) 456-7890.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h5>Do you offer free consultations?</h5>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer free initial consultations for new clients. Contact us to schedule your
+                                    consultation appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h5>What information should I include in my message?</h5>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Please include as much detail as possible about your project or inquiry, including
+                                    timeline, budget range, and specific requirements. This helps us provide you with
+                                    the most accurate response.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h5>Can I schedule a meeting or phone call?</h5>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Please mention your preferred meeting method and available times in your
+                                    message, and we'll coordinate a suitable time for both parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Vanilla</h3>
+                    <p>Modern Bootstrap Theme</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 Vanilla - Design: <a href="https://templatemo.com"><em>TemplateMo</em></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message Sent Successfully!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="success-content">
+                        <i class="fa fa-check-circle"></i>
+                        <p>Thank you for contacting us! We have received your message and will get back to you within 24
+                            hours.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+
+        // FAQ
+        $('.faq-question').click(function () {
+            var faqItem = $(this).parent();
+            var faqAnswer = faqItem.find('.faq-answer');
+            var icon = $(this).find('i');
+
+            if (faqItem.hasClass('active')) {
+                faqItem.removeClass('active');
+                faqAnswer.slideUp();
+                icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            } else {
+                $('.faq-item').removeClass('active');
+                $('.faq-answer').slideUp();
+                $('.faq-question i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+
+                faqItem.addClass('active');
+                faqAnswer.slideDown();
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
